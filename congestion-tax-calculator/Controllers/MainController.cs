@@ -29,6 +29,7 @@ namespace congestion_tax_calculator.Controllers
         {
             var taxCalcInput = GetTaxCalculationInput(inputData.CityId);
 
+            //move this logic to service layer which communicates with Db layer
             if (inputData.Vehicle == Vehicles.Tractor)
                 return CongestionTaxCalculator.GetTax(new Tractor(), taxCalcInput.MaxInputAmount.Amount, inputData.dates, taxCalcInput.TollFreeDays);
             else if (inputData.Vehicle == Vehicles.Car)
@@ -37,6 +38,7 @@ namespace congestion_tax_calculator.Controllers
                 return 0;
         }
 
+        // Move all this logic to DB layer
         private TaxCalculationInput GetTaxCalculationInput(int cityId)
         {
             var result = new TaxCalculationInput();
