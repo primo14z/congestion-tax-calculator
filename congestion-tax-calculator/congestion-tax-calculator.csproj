@@ -19,7 +19,7 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Documents\congestion-tax-calculator\netcore\congestion-tax-calculator-net-core.csproj">
+    <ProjectReference Include="..\congestion-tax-calculator-netcore\congestion-tax-calculator-net-core.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
